@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contenedor{
+    width: 75%;
+    margin: 100px auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.calculadora .formulario{
+    width: 280px;
+    margin: auto;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.calculadora input{
+    margin: 1em 0 1em 0;
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.calculadora .formulario select{
+    width: 150px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.calculadora .calcular{
+    width: 100%;
+    background: orange;
+    border-radius: 4px ;   
+    border-style: none;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.aside{
+    width: 30%;
+    float: left;
+}
