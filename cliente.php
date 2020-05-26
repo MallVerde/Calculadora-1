@@ -3,7 +3,7 @@ require_once('lib/nusoap.php');
 $cliente = new nusoap_client('http://localhost/calculadora/servicio.php');
 
 include('calculadora.php');
-if (isset($_REQUEST['calcular']) && isset($_POST['numero1']) && !empty($_POST['numero1']) && isset($_POST['numero2']) && !empty($_POST['numero2'])) {
+if (isset($_REQUEST['calcular'])) {
   $x = $_REQUEST['numero1'];
   $y = $_REQUEST['numero2'];
   $operacion = $_REQUEST['opciones'];
@@ -22,18 +22,18 @@ if (isset($_REQUEST['calcular']) && isset($_POST['numero1']) && !empty($_POST['n
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
-  <title>Calculadora</title>
+  <title>Calculadora 1</title>
 </head>
 <body>
   <div class="contenedor">
     <div class="calculadora">
       <div class="formulario">
         <div class="titulo">
-          <h1>Calculadora</h1>
+          <h1>Calculadora 1</h1>
         </div>
         <form method="post" action="cliente.php">
-          Numero1: <input type="text" name="numero1" autocomplete="off">
-          Numero2: <input type="text" name="numero2" autocomplete="off">          
+          Numero1: <input type="number" name="numero1" autocomplete="off" required>
+          Numero2: <input type="number" name="numero2" autocomplete="off" required>          
           Operación: <select name="opciones">
             <option value="+">sumar</option>
             <option value="-">restar</option>
